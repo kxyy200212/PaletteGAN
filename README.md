@@ -1,6 +1,7 @@
 # PaletteGAN
 
 PaletteGAN：基于调色板引导的服装草图着色项目。
+![生成结果](./images/result.png)
 
 本仓库包含 **“PaletteGAN：基于调色板引导的服装草图着色”** 项目的相关代码。
 
