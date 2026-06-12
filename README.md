@@ -29,7 +29,7 @@ vgg_weights_path = "./vgg16-397923af.pth"
 
 https://github.com/AemikaChow/AiDLab-fAshIon-Data/blob/main/Datasets/cleaned-maryland.md
 
-该数据集由 Maryland PolyVore 数据集清洗整理而来，并重新划分为 20 个服装类别，包括 Tops、Skirts、Pants、Outwear、Dresses、Jumpsuits、Shoes、Bags 等。数据集页面中也给出了学术使用时需要引用的相关论文。 :contentReference[oaicite:0]{index=0}
+该数据集由 Maryland PolyVore 数据集清洗整理而来，并重新划分为 20 个服装类别，包括 Tops、Skirts、Pants、Outwear、Dresses、Jumpsuits、Shoes、Bags 等。数据集页面中也给出了学术使用时需要引用的相关论文。 
 
 本项目将数据集处理后按照以下格式组织：
 
