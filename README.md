@@ -25,24 +25,20 @@ vgg_weights_path = "./vgg16-397923af.pth"
 
 ## 数据集
 
-数据集需要按照以下格式组织：
+本项目使用的服装数据集来源于 Cleaned Maryland Dataset：
+
+https://github.com/AemikaChow/AiDLab-fAshIon-Data/blob/main/Datasets/cleaned-maryland.md
+
+该数据集由 Maryland PolyVore 数据集清洗整理而来，并重新划分为 20 个服装类别，包括 Tops、Skirts、Pants、Outwear、Dresses、Jumpsuits、Shoes、Bags 等。数据集页面中也给出了学术使用时需要引用的相关论文。 :contentReference[oaicite:0]{index=0}
+
+本项目将数据集处理后按照以下格式组织：
 
 ```text
 dataset/
 ├── line_drawing_dc_hed_contour/
 ├── color_palette/
 └── groundtruth/
-```
 
-线稿图、调色板文件和真实图像需要保持文件名对应。
-
-例如：
-
-```text
-line_drawing_dc_hed_contour/000001.jpg
-color_palette/000001.npy
-groundtruth/000001.jpg
-```
 
 ## 运行
 
