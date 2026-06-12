@@ -1,8 +1,10 @@
 # PaletteGAN
 
-PaletteGAN: Palette-guided fashion sketch coloring.
+PaletteGAN: A palette-guided fashion sketch coloring project.
 
-This repository contains the code for **PaletteGAN**, a palette-guided fashion sketch coloring project based on PyTorch.
+![Generated Result](./images/encoder.png)
+
+This repository contains the code for **"PaletteGAN: Palette-Guided Fashion Sketch Coloring"**.
 
 ## Dependencies
 
@@ -16,7 +18,7 @@ pip install torch torchvision numpy pillow matplotlib
 
 This project uses the VGG16 pretrained model to compute perceptual loss and style loss.
 
-Please place the VGG16 model file in the project directory and modify the path in `palettegan.py`:
+Please place the VGG16 model file in the project directory and modify the model path in `palettegan.py`:
 
 ```python
 vgg_weights_path = "./vgg16-397923af.pth"
@@ -24,27 +26,19 @@ vgg_weights_path = "./vgg16-397923af.pth"
 
 ## Dataset
 
-The fashion dataset used in this project is downloaded from **Cleaned Maryland Dataset**:
+The fashion dataset used in this project is from the Cleaned Maryland Dataset:
 
 https://github.com/AemikaChow/AiDLab-fAshIon-Data/blob/main/Datasets/cleaned-maryland.md
 
-The original fashion images are processed into line drawings, color palette files, and ground truth images. The dataset should be organized as follows:
+This dataset is cleaned and organized based on the Maryland PolyVore dataset. It is reclassified into 20 fashion categories, including Tops, Skirts, Pants, Outwear, Dresses, Jumpsuits, Shoes, Bags, etc. The dataset page also provides related papers that should be cited for academic use.
+
+In this project, the dataset is processed and organized in the following format:
 
 ```text
 dataset/
 ├── line_drawing_dc_hed_contour/
 ├── color_palette/
 └── groundtruth/
-```
-
-The filenames of line drawings, color palettes, and ground truth images should correspond to each other.
-
-For example:
-
-```text
-line_drawing_dc_hed_contour/000001.jpg
-color_palette/000001.npy
-groundtruth/000001.jpg
 ```
 
 ## Execute
@@ -55,7 +49,7 @@ Run the training script:
 python palettegan.py
 ```
 
-You can select different ablation experiments by changing `SELECTED_ABLATION_ID` in `palettegan.py`:
+You can select different ablation experiments by modifying `SELECTED_ABLATION_ID` in `palettegan.py`:
 
 ```python
 SELECTED_ABLATION_ID = 0
@@ -65,3 +59,12 @@ SELECTED_ABLATION_ID = 0
 
 You can use `model_visualization.ipynb` to load the trained generator model and visualize the coloring results.
 
+## Results
+
+The training results will be saved in:
+
+```text
+ablation_experiments/
+```
+
+Including model checkpoints, generated images, and loss curves.
