@@ -893,7 +893,7 @@ def plot_individual_loss(loss_data, title, save_dir, epoch, color):
 # 主函数入口（修改：添加实验组选择）
 if __name__ == "__main__":
     # ---------------------- 关键：手动选择要训练的实验组序号 ----------------------
-    SELECTED_ABLATION_ID = 6  # 在这里修改序号（0-6）选择实验组
+    SELECTED_ABLATION_ID = 0  # 在这里修改序号（0-6）选择实验组
 
     # 固定训练随机种子
     TRAINING_SEED = 2024
