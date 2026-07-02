@@ -1,0 +1,29 @@
+# PyCharm
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+checkpoints/*.pth
+checkpoints/*.pt
+checkpoints/*.ckpt
+
+# Datasets
+dataset/
+data/
+testdata/
+testdata_dc_hed_contour/
+
+# Generated results
+results/
+outputs/
+generated_images/
+ablation_experiments/
