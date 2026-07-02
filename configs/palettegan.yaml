@@ -1,0 +1,50 @@
+# PaletteGAN training configuration
+
+experiment:
+  name: PaletteGAN
+  task: fashion_sketch_colorization
+  seed: 2024
+
+data:
+  dataset_path: ./dataset
+  image_size: 256
+  sketch_dir: line_drawing_dc_hed_contour
+  palette_dir: color_palette
+  groundtruth_dir: groundtruth
+  train_split: splits/train.txt
+  val_split: splits/val.txt
+  test_split: splits/test.txt
+
+input:
+  sketch_type: DC-HED-Contour
+  sketch_channels: 1
+  image_channels: 3
+  palette_colors: 6
+  palette_channels: 3
+
+training:
+  epochs: 100
+  batch_size: 8
+  learning_rate: 0.0002
+  optimizer: Adam
+  beta1: 0.5
+  beta2: 0.999
+  num_workers: 4
+
+loss_weights:
+  adversarial: 1.0
+  l1: 100.0
+  perceptual_color: 10.0
+  ssim: 20.0
+  style: 50.0
+  perceptual: 30.0
+
+hardware:
+  gpu: NVIDIA A30
+  cuda: true
+  cudnn: true
+
+checkpoints:
+  vgg16_weights: ./checkpoints/vgg16-397923af.pth
+  palettegan_weights: ./checkpoints/palettegan.pth
+  save_dir: ./checkpoints
