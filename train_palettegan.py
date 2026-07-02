@@ -917,14 +917,13 @@ if __name__ == "__main__":
     # 配置路径（请根据实际情况修改）
     dataset_path = "./dataset"
     vgg_weights_path = "./checkpoints/vgg16-397923af.pth"
-    # vgg_weights_path = "/share/home/u2415283039/HED/CGAN_sketch_coloring/vgg16-397923af.pth"
     load_gen_weight_path = None  # 可选：预训练权重路径
 
     # 启动训练（传入选中的消融配置）
     generator, discriminator, exp_dir = train_model(
         dataset_path=dataset_path,
         ablation_config=selected_config,  # 传入消融配置
-        exp_name="fashion_pix2pix____06",
+        exp_name="palettegan",
         epochs=100,
         batch_size=8,
         vgg_weights_path=vgg_weights_path,
