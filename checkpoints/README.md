@@ -1,9 +1,8 @@
 # Checkpoints
 
-Large checkpoint files are not included in this repository.
+Large checkpoint files are not included in the main Git repository.
 
-Please place the required checkpoint files in this folder before inference or testing:
+The checkpoint files used in this project are provided separately through Quark Cloud Drive:
 
 ```text
-checkpoints/palettegan.pth
-checkpoints/vgg16-397923af.pth
+https://pan.quark.cn/s/8013790cb21a
